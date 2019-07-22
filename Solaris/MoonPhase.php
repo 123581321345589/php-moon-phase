@@ -404,15 +404,15 @@ class MoonPhase
 	public function phase_name($names = []): string
 	{
 		$names = array_merge([
-			'New Moon',
-			'Waxing Crescent',
-			'First Quarter',
-			'Waxing Gibbous',
-			'Full Moon',
-			'Waning Gibbous',
-			'Third Quarter',
-			'Waning Crescent',
-			'New Moon',
+			'Новолуние',
+			'Молодая луна',
+			'Первая четверть',
+			'Прибывающая луна',
+			'Полнолуние',
+			'Убывающая луна',
+			'Последняя четверть',
+			'Старая луна',
+			'Новолуние',
 		], $names);
 
 		return $names[floor(($this->phase + 0.0625) * 8)];
