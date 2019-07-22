@@ -401,9 +401,9 @@ class MoonPhase
 	*
 	* @return string
 	*/
-	public function phase_name(): string
+	public function phase_name($names = []): string
 	{
-		$names = [
+		$names = array_merge([
 			'New Moon',
 			'Waxing Crescent',
 			'First Quarter',
@@ -413,7 +413,7 @@ class MoonPhase
 			'Third Quarter',
 			'Waning Crescent',
 			'New Moon',
-		];
+		], $names);
 
 		return $names[floor(($this->phase + 0.0625) * 8)];
 	}
